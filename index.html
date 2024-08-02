@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            height: 500px;
+            width: 100%;
+            background-color: rgb(54, 124, 228);
+        }
+
+         li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
+
+        nav {
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        } 
+
+        li a {
+            color: white;
+            text-decoration: none;
+        }
+        .parentList{
+            position: relative;
+        }
+        .innerList{
+            position: absolute;
+            background-color: black;
+            display: none;
+        }
+        .innerList li{
+           padding: 10px;
+        }
+        .parentList:hover .innerList{
+            display: block;
+
+        }
+        .main{
+            position: relative;
+        }
+        .list{
+            position: absolute;
+            background-color: black;
+            display: none;
+            margin-left: 90px;
+        }
+        .main:hover .list{
+            display: block;
+        }                                  
+                
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">WordPress</a></li>
+                <li class="parentList"><a href="">WebDesign+</a>
+                    <ul class="innerList">
+                        <li><a href="">Resource</a></li>
+                        <li><a href="">Link</a></li>
+                        <li class="main"><a href="">Tutorials+</a>
+                            <ul class="list">
+                                <li><a href="">HTML/CSS</a></li>
+                                <li><a href="">JQuery</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                        
+                    
+                </li>
+                <li><a href="">Inspiration</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+
+        </nav>
+    </div>
+</body>
+
+</html>
